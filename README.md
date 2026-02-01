@@ -15,3 +15,7 @@ What is published here is not the full machinery, but the *thinking model* behin
 
 This repository evolves in public by design.
 It is meant to be read, understood, and adapted — not deployed as-is.
+
+---
+
+See [BOUNDARIES.md](https://github.com/giorgioroth/vast-ai-autonomous-manager/blob/main/BOUNDARIES.md) for explicit non-goals and design constraints.
