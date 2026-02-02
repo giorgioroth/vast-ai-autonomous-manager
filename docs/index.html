@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackwell Forge - Autonomous GPU Manager</title>
+    <meta name="description" content="Hardware-first autonomous control for Vast.ai GPU compute nodes">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Monaco', 'Courier New', monospace;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #f0883e;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            letter-spacing: -1px;
+        }
+        h2 {
+            color: #58a6ff;
+            margin: 1.5em 0 0.5em;
+        }
+        p { margin-bottom: 1em; }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover { border-bottom-color: #58a6ff; }
+        .cta {
+            background: #238636;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .cta:hover {
+            background: #2ea043;
+            border: none;
+        }
+        code {
+            background: #161b22;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #f0883e;
+        }
+        .quote {
+            border-left: 3px solid #f0883e;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Blackwell Forge</h1>
+        
+        <p><strong>Autonomous node manager for Vast.ai GPU compute infrastructure.</strong></p>
+        
+        <p>This project exposes the core control loop behind production AI infrastructure: 
+        <code>observe → decide → act → wait</code></p>
+        
+        <div class="quote">
+            "These boundaries are not limitations to be 'fixed'. 
+            They are stability guarantees."
+        </div>
+        
+        <h2>🎯 What it is</h2>
+        <p>A minimal, readable implementation of dynamic GPU pricing based on hardware state:</p>
+        <ul style="margin-left: 20px; margin-bottom: 1em;">
+            <li>Temperature-aware pricing (thermal safety through economics)</li>
+            <li>Utilization-based adjustments (market-responsive)</li>
+            <li>Hardware-first design (GPUs are first-class concerns)</li>
+        </ul>
+        
+        <h2>⚠️ What it is NOT</h2>
+        <p>Not an autonomous agent, not a learning system, not a goal optimizer. 
+        See <a href="https://github.com/giorgioroth/vast-ai-autonomous-manager/blob/main/NON_GOALS.md">NON_GOALS.md</a> 
+        for explicit constraints.</p>
+        
+        <a href="https://github.com/giorgioroth/vast-ai-autonomous-manager" class="cta">
+            → View on GitHub
+        </a>
+        
+        <a href="https://github.com/giorgioroth/vast-ai-autonomous-manager/releases/tag/v1.1-clean" class="cta">
+            → Download v1.1-clean
+        </a>
+        
+        <h2>📚 Documentation</h2>
+        <p>
+            <a href="https://github.com/giorgioroth/vast-ai-autonomous-manager/blob/main/BOUNDARIES.md">BOUNDARIES.md</a> - 
+            System role definition<br>
+            <a href="https://github.com/giorgioroth/vast-ai-autonomous-manager/blob/main/ARCHITECTURE.md">ARCHITECTURE.md</a> - 
+            Technical structure<br>
+            <a href="https://github.com/giorgioroth/vast-ai-autonomous-manager/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> - 
+            How to contribute
+        </p>
+        
+        <hr style="border: none; border-top: 1px solid #30363d; margin: 40px 0;">
+        
+        <p style="color: #8b949e; font-size: 0.9em;">
+            Built for dual RTX 5090 compute nodes. Licensed under MIT.
+        </p>
+    </div>
+</body>
+</html>
+```
