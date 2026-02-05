@@ -1,70 +1,112 @@
-# Contributing to Vast.ai Autonomous Manager
+# Contributing
 
-## Design Philosophy
+## Project Status
 
-Before contributing, please read:
-- `BOUNDARIES.md` - What this system is (and isn't)
-- `NON_GOALS.md` - Explicit behavioral constraints
-- `ARCHITECTURE.md` - Technical structure
+This repository is a **design study and reference artifact**.
 
-## How to Contribute
+- No production guarantees
+- No validated hardware deployment
+- No active roadmap
+- No obligation to accept contributions
 
-### Reporting Issues
+All code and documentation are provided as-is.
 
-When reporting bugs or requesting features:
-1. Check if it aligns with `NON_GOALS.md`
-2. Provide minimal reproduction steps
-3. Include Python version and OS
+See README.md for scope and limitations.
 
-### Code Contributions
+---
 
-**For the minimal core (`core/`):**
-- Keep dependencies at ZERO (stdlib only)
-- Maintain deterministic behavior
-- Add tests for new pricing strategies
-- Update documentation
+## Design Boundaries
 
-**For production extensions (`production/` - future):**
-- Document deployment requirements
-- Include security considerations
-- Provide example configurations
+Any contribution MUST respect the following documents:
 
-## Code Style
+- BOUNDARIES.md
+- NON_GOALS.md
+- ARCHITECTURE.md
 
-- Python 3.10+ type hints
-- Black formatter (line length 100)
-- Docstrings for public functions
-- Clear variable names (readability > brevity)
+These files define **hard constraints**, not suggestions.
 
-## Pull Request Process
+Contributions that violate these boundaries will be rejected.
 
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/your-feature`)
-3. Commit changes (`git commit -m 'Add: brief description'`)
-4. Push to branch (`git push origin feature/your-feature`)
-5. Open Pull Request with:
-   - Clear description
-   - Reference to related issue (if any)
-   - Explanation of design decisions
+---
 
-## What We Accept
+## Acceptable Contributions
 
-✅ Pricing strategy improvements  
-✅ Safety threshold refinements  
-✅ Documentation clarifications  
-✅ Bug fixes with tests  
-✅ Example scripts  
+The following types of contributions MAY be considered:
 
-## What We Don't Accept
+- Documentation clarifications
+- Bug fixes with minimal scope
+- Safety-related corrections
+- Hardware validation reports (clearly marked as external testing)
+- Configuration examples with explicit assumptions
 
-❌ Agentic or learning behavior  
-❌ Semantic memory systems  
-❌ Long-horizon optimization  
-❌ Complex external dependencies for core  
+All contributions must be explicit, inspectable, and narrowly scoped.
 
-See `NON_GOALS.md` for rationale.
+---
 
-## Questions?
+## Non-Acceptable Contributions
 
-Open an issue with the `question` label.
-```
+The following will NOT be accepted:
+
+- Agentic or self-modifying behavior
+- Learning or adaptive systems
+- Long-horizon planning or optimization
+- Implicit state, memory, or context accumulation
+- Complex dependency chains in core logic
+- Features added “for completeness” or future speculation
+
+These exclusions are intentional.
+
+---
+
+## Code Constraints
+
+For core components:
+
+- Standard library only
+- Deterministic behavior
+- No background network activity
+- No hidden state
+- No implicit side effects
+
+If behavior cannot be explained plainly, it does not belong here.
+
+---
+
+## Pull Requests
+
+If you open a pull request:
+
+- Describe exactly what changes
+- Explain why it fits within existing boundaries
+- State clearly what was tested and where
+- Do not assume merge
+
+Pull requests may be declined without modification requests.
+
+---
+
+## Issues
+
+Issues may be used to:
+
+- Report concrete problems
+- Ask clarifying questions about documented behavior
+- Share external testing observations
+
+Issues requesting new features or roadmap discussion will be closed.
+
+---
+
+## License
+
+By contributing, you agree that your contribution is licensed under the MIT License.
+
+---
+
+## Final Note
+
+This repository is not under active development.
+
+It exists as a documented architectural position.
+
+Contributions are optional, not expected.
