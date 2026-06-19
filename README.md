@@ -5,8 +5,8 @@
 ---
 
 [![Release](https://img.shields.io/github/v/release/giorgioroth/vast-ai-autonomous-manager?include_prereleases&label=release)](https://github.com/giorgioroth/vast-ai-autonomous-manager/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-red.svg)](https://www.python.org/downloads/)
 
 ---
 
