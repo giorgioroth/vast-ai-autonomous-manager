@@ -1,11 +1,17 @@
-## HARDWARE REFERENCE
+# HARDWARE REFERENCE
 
-## Dual RTX 5090 Workstation — Silent, Stable, Long-Run (2025)
+## Dual RTX 5090 Workstation — Silent, Stable, Long-Run (Theoretical Design)
 
-This document describes a **reference hardware configuration** developed over two months of real-world iteration.
+This document describes a **theoretical reference hardware configuration**,
+developed over approximately two months of component-level design reasoning.
+It has **not been physically built, purchased, or measured**. Every figure
+below is a **design target derived by reasoning**, not an empirical
+measurement.
 
-It is **not a requirement** to run `vast-ai-autonomous-manager`.  
-It is a **hardware baseline** for users who prioritize thermal stability, acoustic comfort, and long-running AI workloads over peak benchmarks or aesthetics.
+It is **not a requirement** to run `vast-ai-autonomous-manager`.
+It is a **hardware baseline on paper** for users who would prioritize thermal
+stability, acoustic comfort, and long-running AI workloads over peak
+benchmarks or aesthetics.
 
 ---
 
@@ -26,87 +32,99 @@ No component was selected for RGB, novelty, or short-lived benchmarks.
 ## Chassis & airflow
 
 ### Case
-- **be quiet! Dark Base Pro 901 (Black)**  
-  High-airflow full tower with excellent acoustic dampening  
-  Supports extreme fan density without turbulence
+
+- **be quiet! Dark Base Pro 901 (Black)**
+High-airflow full tower with strong acoustic dampening
+Supports high fan density without turbulence
 
 ### Dust management
-- **2× GELID SOLUTIONS Magnetic Mesh 140 mm**  
-  Washable, low-restriction filters with magnetic mounting  
-  Additional GAUDER magnetic strips for secure sealing
+
+- **2× GELID SOLUTIONS Magnetic Mesh 140 mm**
+Washable, low-restriction filters with magnetic mounting
+Additional GAUDER magnetic strips for secure sealing
 
 ### Airflow capacity
-Up to **17 fans total**, allowing very low PWM curves while maintaining headroom.
+
+Up to **17 fans total**, intended to allow very low PWM curves while
+maintaining headroom.
 
 ---
 
 ## Power delivery
 
 ### Power Supply
-- **Seasonic Prime PX-2200 ATX 3.1 — 2200 W**  
-  Fully modular, <20 dBA operation, 12-year warranty  
-  Safe headroom for dual RTX 5090 under sustained load  
-  Eco Mode enabled for low idle consumption
+
+- **Seasonic Prime PX-2200 ATX 3.1 — 2200 W**
+Fully modular, <20 dBA rated operation, 12-year warranty
+Specified for safe headroom for dual RTX 5090 under sustained load
+Eco Mode for low idle consumption
 
 ---
 
 ## GPUs
 
 ### Graphics cards
-- **2× ASUS ROG Astral LC GeForce RTX 5090 — 32 GB GDDR7**  
-  Each GPU cooled by a dedicated 360 mm AIO  
-  Controlled via ASUS GPU Tweak III
+
+- **2× ASUS ROG Astral LC GeForce RTX 5090 — 32 GB GDDR7**
+Each GPU cooled by a dedicated 360 mm AIO
+Controlled via ASUS GPU Tweak III
 
 ### GPU support
-- **2× ASUS ROG Herculx GPU brackets**  
-  Horizontal mounting, zero sag, no airflow obstruction
+
+- **2× ASUS ROG Herculx GPU brackets**
+Horizontal mounting, zero sag, no airflow obstruction
 
 ---
 
 ## CPU & cooling
 
 ### Processor
-- **AMD Ryzen 9 9950X3D**  
-  16 cores / 32 threads  
-  144 MB cache  
-  Boost up to 5.7 GHz
+
+- **AMD Ryzen 9 9950X3D**
+16 cores / 32 threads
+144 MB cache
+Boost up to 5.7 GHz
 
 ### CPU cooling
-- **be quiet! Silent Loop 3 — 420 mm AIO**  
-  3× Silent Wings 4 140 mm PWM
+
+- **be quiet! Silent Loop 3 — 420 mm AIO**
+3× Silent Wings 4 140 mm PWM
 
 ### Thermal interface
-- **Thermal Grizzly Duronaut** thermal paste  
+
+- **Thermal Grizzly Duronaut** thermal paste
 - **Thermal Grizzly AM5 Contact & Sealing Frame**
 
 ---
 
 ## Motherboard
 
-- **ASUS ROG Crosshair X870E Extreme (E-ATX)**  
-  20+2+2 power stages  
-  3× PCIe 5.0  
-  Wi-Fi 7  
-  Integrated diagnostics and LCD
+- **ASUS ROG Crosshair X870E Extreme (E-ATX)**
+20+2+2 power stages
+3× PCIe 5.0
+Wi-Fi 7
+Integrated diagnostics and LCD
 
 ---
 
 ## Memory
 
-- **256 GB DDR5 (2×128 GB) Crucial Pro 5600 MT/s CL46**  
-  AMD EXPO compatible  
-  Selected for stability and capacity over latency
+- **256 GB DDR5 (2×128 GB) Crucial Pro 5600 MT/s CL46**
+AMD EXPO compatible
+Selected for stability and capacity over latency
 
 ---
 
 ## Storage (local)
 
 ### Primary storage
-- **2× Samsung 9100 PRO 8 TB PCIe 5.0**  
-  Configured as **RAID 1** → 8 TB usable  
-  Focus on reliability over raw throughput
+
+- **2× Samsung 9100 PRO 8 TB PCIe 5.0**
+Configured as **RAID 1** → 8 TB usable
+Focus on reliability over raw throughput
 
 ### Optional scratch
+
 - Additional 4 TB SSDs on secondary M.2 slots for AI scratch space
 
 ---
@@ -118,7 +136,7 @@ Up to **17 fans total**, allowing very low PWM curves while maintaining headroom
 - 6× GPU AIO fans (2×360 mm)
 - 8× additional Silent Wings 4 140 mm PWM (high-speed)
 
-### Recommended airflow layout (simplified)
+### Intended airflow layout (simplified)
 
 - **Front (Intake):** CPU radiator 420 mm push/pull
 - **GPU radiators:** Dedicated airflow paths per GPU
@@ -128,42 +146,49 @@ Up to **17 fans total**, allowing very low PWM curves while maintaining headroom
 
 ---
 
-## Expected operating characteristics (AI load)
+## Design-target operating characteristics (AI load)
 
-- **Dual RTX 5090:** 65–70 °C
-- **Ryzen 9950X3D:** ~60 °C
-- **Target noise level:** <35 dBA  
-  (Quiet PWM profiles, no aggressive fan ramps)
+The following are **estimated targets derived from design reasoning**, not
+measured values. No hardware was built or instrumented; these figures
+represent the thermal and acoustic envelope the configuration is intended
+to achieve, and would require physical validation to confirm.
+
+- **Dual RTX 5090:** estimated 65–70 °C (target)
+- **Ryzen 9950X3D:** estimated ~60 °C (target)
+- **Target noise level:** <35 dBA
+(assuming quiet PWM profiles, no aggressive fan ramps)
 
 ---
 
 ## External storage & data plane
 
 ### NAS
+
 - **Synology DS923+**
-  - 4 bays
-  - 48 TB raw (4×12 TB)
-  - SHR-2 → ~24 TB usable
-  - 32 GB ECC RAM
-  - 2 TB NVMe cache
-  - 10 GbE expansion
+  * 4 bays
+  * 48 TB raw (4×12 TB)
+  * SHR-2 → ~24 TB usable
+  * 32 GB ECC RAM
+  * 2 TB NVMe cache
+  * 10 GbE expansion
 
 ### Networking
-- **10 GbE internal network**
-  - Zyxel AX7501-B0 (ONT + router, 10 GbE port)
-  - Intel X550-T2 dual-port NIC (PC)
-  - UGREEN Cat8 cabling
 
-This separates **compute I/O** from **bulk data and backups**.
+- **10 GbE internal network**
+  * Zyxel AX7501-B0 (ONT + router, 10 GbE port)
+  * Intel X550-T2 dual-port NIC (PC)
+  * UGREEN Cat8 cabling
+
+This is intended to separate **compute I/O** from **bulk data and backups**.
 
 ---
 
 ## Power protection
 
 - **APC Smart-UPS SMT3000IC**
-  - 3000 VA
-  - SmartConnect monitoring
-  - Clean shutdown support
+  * 3000 VA
+  * SmartConnect monitoring
+  * Clean shutdown support
 
 ---
 
@@ -176,7 +201,7 @@ This separates **compute I/O** from **bulk data and backups**.
 
 ## Summary
 
-This configuration delivers:
+On paper, this configuration is designed to deliver:
 
 - Dual RTX 5090 compute
 - High-capacity, stable memory
@@ -185,20 +210,20 @@ This configuration delivers:
 - Quiet operation under sustained load
 - UPS-backed power integrity
 
-It is designed to **run continuously**, not to impress briefly.
+It is designed to **run continuously** if built — not to impress briefly.
 
 ---
 
 ## Scope note
 
-This hardware reference is provided **as-is**, without obligation or endorsement.
+This hardware reference is provided **as-is**, without obligation or
+endorsement, and describes a configuration that exists only as a design.
 
-`vast-ai-autonomous-manager` does **not** depend on this configuration.  
+`vast-ai-autonomous-manager` does **not** depend on this configuration.
 The system is hardware-agnostic by design.
 
-This document exists to share **practical engineering decisions**, not requirements.
-
-It describes a theoretically sound, hardware-first configuration,
-derived from careful design and component-level reasoning,
-not from empirical benchmarking or performance claims.
-
+This document exists to share **practical engineering decisions** reached
+through component-level reasoning, **not** requirements, and **not**
+empirical benchmarking or performance claims. No system was built, run, or
+measured; all operating figures are design targets that would require
+physical validation.
