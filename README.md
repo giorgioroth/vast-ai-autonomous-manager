@@ -32,7 +32,7 @@ This repository is frozen as documentation of an architectural exploration.
 The project explores:
 
 - Autonomous control loops for GPU rental environments
-- Hardware-first safety constraints (thermal limits, watchdogs)
+- How hardware-first safety constraints (thermal limits, watchdogs) could be enforced
 - Absence-tolerant operation (systems designed to function without operator presence)
 - Explicit boundary definition between control logic and execution environment
 
@@ -69,6 +69,8 @@ It should be treated as **conceptual**, not executable infrastructure.
 
 ## Hardware References
 
+Documented from a configuration the author designed but did not build.
+
 Example hardware configurations are documented for **context only**.
 
 They are:
@@ -76,8 +78,6 @@ They are:
 - Not physically built
 - Not validated
 - Not endorsements or recommendations
-
-Any resemblance to real or planned systems is incidental.
 
 ---
 
